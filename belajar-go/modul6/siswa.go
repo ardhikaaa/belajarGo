@@ -3,22 +3,21 @@ package main
 import "fmt"
 
 func main() {
-	var n int
+	var x int
 
-	fmt.Scan(&n)
+	fmt.Print("Masukkan nilai Anda: ")
+	fmt.Scan(&x)
 
-	for n >= 60 {
-		fmt.Println("Anda Lulus Ujian")
-		break
+	for x != -1 {
+		if x >= 60 {
+			fmt.Println("Anda lulus ujian.")
+		} else {
+			fmt.Println("Anda tidak lulus ujian.")
+		}
+
+		fmt.Print("Masukkan nilai Anda: ")
+		fmt.Scan(&x)
 	}
 
-	for n < 60 && n >= 0 {
-		fmt.Print("Anda Tidak Lulus Ujian")
-		break
-	}
-
-	for n < 0 {
-		fmt.Println("Program Selesai")
-		break
-	}
+	fmt.Println("Program selesai.")
 }
