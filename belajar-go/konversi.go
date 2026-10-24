@@ -7,18 +7,17 @@ func main() {
 
 	fmt.Scan(&x)
 
-	switch {
-	case x >= 85 && x <= 100:
+	if x >= 85 && x <= 100 {
 		fmt.Println("A")
-	case x >= 70 && x <= 84:
+	} else if x >= 70 && x <= 84 {
 		fmt.Println("B")
-	case x >= 55 && x <= 69:
+	} else if x >= 55 && x <= 69 {
 		fmt.Println("C")
-	case x >= 40 && x <= 54:
+	} else if x >= 40 && x <= 54 {
 		fmt.Println("D")
-	case x >= 0 && x <= 39:
+	} else if x >= 0 && x <= 39 {
 		fmt.Println("E")
-	default:
-		fmt.Println("Operator tidak valid")
+	} else {
+		fmt.Println("Nilai tidak valid")
 	}
 }
